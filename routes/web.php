@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Admin\Costumer\Index;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect('/login');
+});
+
+Route::get('home', function () {
+    return redirect()->route('admin.customers.index');
+});
+
+Route::group(['middleware' => 'web', 'prefix' => 'admin', 'as' => 'admin.'], function () {
+    Route::group(['prefix' => 'customers', 'as' => 'customers.'], function () {
+        Route::get('/', Index::class)->name('index');
+    });
 });

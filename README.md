@@ -18,6 +18,20 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - Database agnostic [schema migrations](https://laravel.com/docs/migrations).
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [Laravel Livewire](https://laravel-livewire.com/docs/2.x/quickstart)
+- [Laravel Livewire Table](https://github.com/rappasoft/laravel-livewire-tables)
+- [Livewire Alert](https://livewire-alert.jantinnerezo.com/)
+
+## How to run
+```
+git clone git@github.com:humamalamin/test-xylo.git
+run composer install
+copy .env.example to .env
+change database configuration in .env
+run php artisan key:generate
+run php artisan migrate --seed
+run php artisan serve
+```
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
